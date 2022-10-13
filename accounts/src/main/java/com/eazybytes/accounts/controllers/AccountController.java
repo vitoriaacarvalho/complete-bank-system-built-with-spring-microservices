@@ -20,7 +20,7 @@ public class AccountController {
 	
 	@PostMapping("/myAccount")
 	@Timed(value="getAccountDetails.time", description="time taken to return account details")
-	public Accounts getAccountDetails(@RequestBody Customer customer) {
+	public Accounts getAccountsDetails(@RequestBody Customer customer) {
 		Accounts accounts=repository.findByCustomerId(customer.getId());
 		if (accounts != null) {
 			return accounts;
@@ -29,11 +29,4 @@ public class AccountController {
 			return null;
 		}
 	}
-		
-	
-	
-	
-	
-	
-	
 }

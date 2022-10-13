@@ -3,19 +3,11 @@ package com.eazybytes.accounts.models;
 import java.time.LocalDate;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-
-@Entity
-@Getter @Setter @ToString
 public class Customer {
-	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="customer_id")
@@ -30,6 +22,15 @@ public class Customer {
 	
 	@Column(name="create_dt")
 	private LocalDate createDt;
+
+	public Customer(Integer id, String name, String email, String mobileNumber, LocalDate createDt) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.mobileNumber = mobileNumber;
+		this.createDt = createDt;
+	}
 
 	public Integer getId() {
 		return id;
@@ -70,6 +71,6 @@ public class Customer {
 	public void setCreateDt(LocalDate createDt) {
 		this.createDt = createDt;
 	}
-	
-	
+
+
 }
