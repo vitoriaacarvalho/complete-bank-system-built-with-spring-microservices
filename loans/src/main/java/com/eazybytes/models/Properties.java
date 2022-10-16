@@ -35,6 +35,10 @@ public class Properties {
 	public void setMailDetails(Map<String, String> mailDetails) {
 		this.mailDetails = mailDetails;
 	}
+	
+	public void setActiveBranches(List<String> activeBranches) {
+		this.activeBranches = activeBranches;
+	}
 	public List<String> getActiveBranches() {
 		return activeBranches;
 	}	

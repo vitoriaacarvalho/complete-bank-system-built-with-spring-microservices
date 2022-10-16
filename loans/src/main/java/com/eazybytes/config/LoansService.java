@@ -31,6 +31,9 @@ public class LoansService {
 	public Map<String, String> getMailDetails() {
 		return mailDetails;
 	}
+	public void setActiveBranches(List<String> activeBranches) {
+		this.activeBranches = activeBranches;
+	}
 	public void setMailDetails(Map<String, String> mailDetails) {
 		this.mailDetails = mailDetails;
 	}
